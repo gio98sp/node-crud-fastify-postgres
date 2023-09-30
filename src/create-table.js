@@ -1,4 +1,4 @@
-import { sql } from './db.js'
+import { sql } from './db.js';
 
 // sql`DROP TABLE IF EXISTS videos;`.then(() => console.log('Deleted Table!'))
 
@@ -9,4 +9,4 @@ sql`
     description TEXT,
     duration    INTEGER
   );
-`.then(() => console.log('Created Table!'))
+`.then(() => console.log('Created Table!'));
