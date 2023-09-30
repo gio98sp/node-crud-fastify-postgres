@@ -1,3 +1,6 @@
+const port = process.env.PORT || 3000;
+const host = ("RENDER" in process.env) ? `0.0.0.0` : `localhost`;
+
 import { fastify } from 'fastify';
 import { DatabasePostgres } from './database-postgres.js';
 
@@ -49,9 +52,7 @@ app.delete('/videos/:id', async (req, reply) => {
 
 app.listen(
   {
-    port: process.env.PORT ?? 3000,
-  },
-  () => {
-    console.log('Server is running 🚀');
+    host: host,
+    port: port,
   }
 );
