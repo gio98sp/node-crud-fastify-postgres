@@ -49,6 +49,7 @@ app.delete('/videos/:id', async (req, reply) => {
 
 app.listen(
   {
+    host: '0.0.0.0',
     port: process.send.PORT ?? 3000,
   },
   () => {
